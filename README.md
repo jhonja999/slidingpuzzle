@@ -1,64 +1,80 @@
 # slidingpuzzle
 ![image](https://github.com/user-attachments/assets/02cfd696-ce58-4802-99d3-b500bb351930)
 
-Sliding Puzzle con Carga de Foto Personalizada
-Este proyecto es una implementación de un puzzle deslizante donde los usuarios pueden subir su propia foto para usarla como imagen del puzzle. El juego divide la imagen en varias piezas que deben ser reordenadas en el tablero deslizándolas hasta resolver el puzzle.
+# Puzzle Sliding con Foto Personalizada
 
-Características
-Carga de imagen personalizada: Permite al usuario cargar cualquier imagen desde su dispositivo para crear el puzzle.
-Piezas deslizantes: Divide la imagen en una cuadrícula de piezas deslizantes, con una casilla vacía para permitir los movimientos.
-Interfaz interactiva: Utiliza componentes y estilos modernos para una experiencia de usuario agradable.
-Mensajes de notificación: Muestra notificaciones al usuario con toast al iniciar y al completar el puzzle.
-Configuración del tamaño del puzzle: Ajustable para diferentes niveles de dificultad (ej., 3x3, 4x4, etc.).
-Tecnologías
-Next.js para el servidor y la interfaz de usuario.
-React para la construcción de componentes interactivos.
-ShadCN UI para las notificaciones y otros componentes de UI.
-Canvas para el procesamiento de imágenes y la creación de piezas del puzzle.
-Lucide Icons para iconos visualmente atractivos.
-Canvas-Confetti para animaciones de celebración al resolver el puzzle.
-Instalación
-Clona el repositorio:
+Este proyecto es una aplicación de puzzle deslizante (sliding puzzle) en la que los usuarios pueden subir una foto personalizada que se dividirá en piezas para formar el rompecabezas. El objetivo del juego es reorganizar las piezas deslizantes hasta recomponer la imagen original.
+
+## Características
+
+- **Subida de Foto Personalizada**: Los usuarios pueden subir una imagen propia que se divide en piezas de puzzle.
+- **Ajuste de Dificultad**: Configura el tamaño del puzzle (3x3, 4x4, 5x5).
+- **Contador de Movimientos y Tiempo**: Monitorea el tiempo y la cantidad de movimientos realizados.
+- **Animación de Confeti**: Felicitación visual con confeti al resolver el puzzle.
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Framework de React para el desarrollo de la aplicación web.
+- **React**: Librería de JavaScript para la construcción de la interfaz de usuario.
+- **Canvas-confetti**: Librería para efectos visuales de confeti.
+- **ShadCN UI**: Componentes de interfaz de usuario personalizados.
+- **Lucide-react**: Conjunto de iconos para mejorar la experiencia visual.
+
+## Instalación
+
+### Prerrequisitos
+
+Asegúrate de tener **Node.js** y **npm** instalados en tu sistema. Puedes instalar Node.js desde [nodejs.org](https://nodejs.org/).
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+Navega al directorio del proyecto:
 
 bash
 Copiar código
-git clone https://github.com/usuario/sliding-puzzle
-cd sliding-puzzle
+cd tu-repositorio
 Instala las dependencias:
 
 bash
 Copiar código
 npm install
-Ejecuta el proyecto:
+Configuración Adicional de ShadCN UI
+Asegúrate de haber instalado todos los componentes necesarios de ShadCN UI para el proyecto:
+
+bash
+Copiar código
+npx shadcn add toast dialog button slider
+Iniciar el Proyecto
+Inicia la aplicación localmente:
 
 bash
 Copiar código
 npm run dev
-Abre http://localhost:3000 en tu navegador para ver el proyecto.
+Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
 
 Uso
-Cargar Imagen: Al inicio, selecciona una imagen para el puzzle. La imagen se cortará en piezas cuadradas según el tamaño del tablero elegido.
-
-Seleccionar Dificultad: Usa el deslizador para ajustar la dificultad (por ejemplo, de 3x3 a 5x5 piezas).
-
-Resolver el Puzzle: Haz clic o desliza las piezas para reordenarlas y restaurar la imagen original.
-
-Celebración: Una animación de confeti y un mensaje de felicitación aparecerán al completar el puzzle.
-
-Componentes Principales
-PuzzleBoard: Componente que representa el tablero del puzzle y controla el movimiento de las piezas.
-ImageUploader: Permite al usuario cargar y previsualizar una imagen antes de crear el puzzle.
-Slider: Para seleccionar la dificultad del puzzle ajustando el tamaño de la cuadrícula.
-Toast Notifications: Muestra notificaciones al usuario, como mensajes de éxito al resolver el puzzle.
-Personalización
-Para cambiar el tamaño predeterminado del puzzle o los colores de la interfaz, puedes modificar las variables de configuración en el archivo config.js.
-
-Problemas Comunes
-Módulos no encontrados: Si recibes errores de módulos faltantes como @/components/ui/use-toast o canvas-confetti, asegúrate de que todos los paquetes estén instalados y configurados correctamente.
-Imagen no visible en el puzzle: Asegúrate de que la imagen cargada sea de un formato compatible, como JPG o PNG.
-Contribución
-Haz un fork del proyecto.
-Crea una rama nueva (git checkout -b feature-nueva-funcionalidad).
-Realiza los cambios y confirma los cambios (git commit -m 'Añadir nueva funcionalidad').
-Sube tu rama (git push origin feature-nueva-funcionalidad).
-Abre un Pull Request.
+Sube una imagen desde tu dispositivo para iniciar el puzzle.
+Selecciona el tamaño del rompecabezas desde las opciones (ejemplo: 3x3, 4x4, 5x5).
+Resuelve el puzzle reorganizando las piezas.
+Una vez que el puzzle esté completo, recibirás una animación de confeti como felicitación.
+Estructura del Proyecto
+plaintext
+Copiar código
+.
+├── components/
+│   ├── PuzzleBoard.tsx        # Componente principal del tablero del puzzle
+│   ├── Tile.tsx               # Componente de cada pieza del puzzle
+│   ├── UploadImage.tsx        # Componente para cargar la imagen del usuario
+│   ├── Timer.tsx              # Componente del temporizador
+│   └── ui/                    # Componentes UI de ShadCN
+│
+├── pages/
+│   └── index.tsx              # Página principal que renderiza el puzzle
+│
+├── public/
+│   └── images/                # Carpeta para imágenes predeterminadas
+│
+└── utils/
+    └── puzzleUtils.ts         # Funciones de lógica del puzzle (mezclar, verificar posiciones, etc.)
