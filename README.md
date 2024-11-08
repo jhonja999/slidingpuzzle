@@ -29,7 +29,7 @@ Asegúrate de tener **Node.js** y **npm** instalados en tu sistema. Puedes insta
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/tu-usuario/tu-repositorio.git](https://github.com/jhonja999/slidingpuzzle.git
 Navega al directorio del proyecto:
 
 bash
