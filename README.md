@@ -59,22 +59,3 @@ Sube una imagen desde tu dispositivo para iniciar el puzzle.
 Selecciona el tamaño del rompecabezas desde las opciones (ejemplo: 3x3, 4x4, 5x5).
 Resuelve el puzzle reorganizando las piezas.
 Una vez que el puzzle esté completo, recibirás una animación de confeti como felicitación.
-Estructura del Proyecto
-plaintext
-Copiar código
-.
-├── components/
-│   ├── PuzzleBoard.tsx        # Componente principal del tablero del puzzle
-│   ├── Tile.tsx               # Componente de cada pieza del puzzle
-│   ├── UploadImage.tsx        # Componente para cargar la imagen del usuario
-│   ├── Timer.tsx              # Componente del temporizador
-│   └── ui/                    # Componentes UI de ShadCN
-│
-├── pages/
-│   └── index.tsx              # Página principal que renderiza el puzzle
-│
-├── public/
-│   └── images/                # Carpeta para imágenes predeterminadas
-│
-└── utils/
-    └── puzzleUtils.ts         # Funciones de lógica del puzzle (mezclar, verificar posiciones, etc.)
